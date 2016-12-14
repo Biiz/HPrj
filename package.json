@@ -1,0 +1,28 @@
+{
+  "name": "esercizio",
+  "version": "1.0.0",
+  "description": "Progetto - Applicazione per università",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine spec",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biiz/SE2_16_157597_173209_P.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biiz/SE2_16_157597_173209_P/issues"
+  },
+  "homepage": "https://github.com/Biiz/SE2_16_157597_173209_P#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "request": "^2.79.0",
+    "request-json": "^0.6.1",
+    "util": "^0.10.3"
+  }
+}
