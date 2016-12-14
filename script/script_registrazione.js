@@ -56,14 +56,17 @@ function registrazione(){
         //creo una request
     	var xhr = new XMLHttpRequest();
     	var url = "http://127.0.0.1:5000/registrazione";
+
     	xhr.open("post", url, true);
     	xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     	// spedire i dati come json
     	xhr.send(JSON.stringify(data));
+        console.log("+++++++++++++++++++++++++++++++++++++++++++++ 59 riga  registraizone++++++++++++++");
         //processo il JSON ricevuto
         xhr.onloadend = function (){
             var result=xhr.responseText;
             result = JSON.parse(result);
+            console.log(result.answer);
             //se result affermativo mostro un alert e reindizzo all pagina home.html
             if(result.answer == true){
             	alert("utente inserito con successo");

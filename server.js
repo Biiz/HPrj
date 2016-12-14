@@ -13,10 +13,10 @@ var database_petizione = require('./datacenter/database_petizioni.js');
 //variabile indicante l'email dell'utente corrente
 var email_utente = "";
 
-app.use(express.static(__dirname + '/html', { redirect : false }));
+app.use(express.static(__dirname + '/', { redirect : false }));
 
 app.get('/',function(request,response){
-    response.sendFile('html/home.html');
+    response.sendFile('html/home.html', { root: __dirname });
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -126,7 +126,7 @@ app.post('/registrazione', function(request, response){
     else{
         response.writeHead(406, headers);
     }
-    response.sendFile('script/script_registrazione.js');
+    
     response.end(json);
 });
 
