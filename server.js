@@ -126,7 +126,7 @@ app.post('/registrazione', function(request, response){
     else{
         response.writeHead(406, headers);
     }
-    
+    console.log(util.inspect(json));
     response.end(json);
 });
 
